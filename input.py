@@ -55,15 +55,24 @@ def split_data(data, training_pct=0.6, dev_pct=0.2):
     return training, dev, test
 
 
+def split_x_y(data, y_col):
+    y = data[:, y_col]
+    return np.delete(data, y_col, axis=1), y
+
 # test_data = np.array([[1, 2], [2, 3], [3, 4]])
 # print(test_data)
 # print(test_data.shape)
 # res, mw = normalize_m1_1(test_data)
 # print(denormalize(res, mw))
 
-
 # test_data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 # training, dev, test = split_data(test_data)
 # print(training)
 # print(dev)
 # print(test)
+
+# data = np.array([[1, 2, 3], [1, 2, 3], [1, 2, 3]])
+# print(data)
+# x, y = split_x_y(data, 0)
+# print(x)
+# print(y)
