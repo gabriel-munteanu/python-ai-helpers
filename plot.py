@@ -14,7 +14,7 @@ def learning_loss(history):
     plt.xlabel('Number of Epochs')
     plt.ylabel('Loss')
     plt.title(' Model Loss')
-    plt.legend(['Training', 'Test'])
+    plt.legend(['Training', 'Dev'])
     plt.show()
 
 
