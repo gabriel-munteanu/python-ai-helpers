@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 
 def learning_loss(history):
     # Plot learning/loss curves from keras fit result
-    plt.figure(figsize=(25, 20))
+    plt.figure(figsize=(20, 8))
     plt.plot(history.epoch, history.history['loss'], )
     plt.plot(history.epoch, history.history['val_loss'])
     plt.xlabel('Number of Epochs')
@@ -19,7 +19,7 @@ def learning_loss(history):
 
 
 def actual_vs_predicted(actual, predicted):
-    plt.figure(figsize=(25, 20))
+    plt.figure(figsize=(20, 8))
     plt.plot(actual)
     plt.plot(predicted)
     plt.legend(['Actual', 'Predicted'])
